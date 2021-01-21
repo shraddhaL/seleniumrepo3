@@ -8,7 +8,6 @@ ADD  target/container-test.jar container-test.jar
 ADD  target/libs libs
 
 # Add the suite xmls
-ADD suite/order-module.xml order-module.xml
 ADD suite/search-module.xml search-module.xml
 
 # Command line to execute the test
