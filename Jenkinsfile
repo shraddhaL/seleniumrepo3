@@ -20,6 +20,31 @@ pipeline {
 		       bat 'mvn clean package  -DskipTests'
         }
         }
+	       stage('Build Image') {
+            steps {
+                script {
+                	app = docker.build("shraddhal/seleniumtest2")
+                }
+            }
+        }
+	    
+	    
+       stage('Push Image') {
+            steps {
+                script {// aws:76599700-71c5-4af4-b805-1bcd97a088e4
+			     withCredentials([usernamePassword( credentialsId: 'aecd95e5-cb44-4e0e-93e9-52385789176c', usernameVariable: 'shraddhal', passwordVariable: 'dockerhub1234')]) {
+					
+			docker.withRegistry('https://registry.hub.docker.com', 'aecd95e5-cb44-4e0e-93e9-52385789176c') {
+					bat "docker login -u shraddhal -p dockerhub1234"
+					app.push("${BUILD_NUMBER}")
+					app.push("latest")
+				}
+			
+             		   }
+         	   }
+	      }        
+   	 }
+	    
 		
 	    stage('compose') {
             steps {
