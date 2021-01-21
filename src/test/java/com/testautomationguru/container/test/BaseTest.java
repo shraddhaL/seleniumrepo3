@@ -32,7 +32,7 @@ public class BaseTest {
 
         String host = System.getProperty("seleniumHubHost");
         
-        driver = new RemoteWebDriver(new URL("http://" + host + ":4444/wd/hub"), dc);
+        driver = new RemoteWebDriver(new URL("http://" + host + ":4545/wd/hub"), dc);
         
     }
 
