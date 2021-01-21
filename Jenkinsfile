@@ -4,7 +4,12 @@ pipeline {
         maven 'maven3.6' 
 	jdk 'jdk1.8'
     }
-	
+	 environment {
+        containerName = "shraddhal/seleniumtest3"
+        container_version = "1.0.0.${BUILD_ID}"
+        dockerTag = "${containerName}:${container_version}"
+		     
+    }
     stages { 	
 	    stage('Clone repository') {
 			   steps {	       
@@ -23,7 +28,7 @@ pipeline {
 	       stage('Build Image') {
             steps {
                 script {
-                	app = docker.build("shraddhal/seleniumtest2")
+                	app = docker.build("shraddhal/seleniumtest3")
                 }
             }
         }
