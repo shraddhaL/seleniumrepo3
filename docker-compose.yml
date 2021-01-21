@@ -35,11 +35,11 @@ services:
       - BROWSER=chrome
       - SELENIUM_HUB=selenium-hub
     volumes:
-      - order-module-result:/output
+      - search-module-result:/output
 networks:
   selenium:
     name: selenium
 volumes:
-  order-module-result:
+  search-module-result:
     external: true
 
