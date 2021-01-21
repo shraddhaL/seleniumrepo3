@@ -39,3 +39,7 @@ services:
 networks:
   selenium:
     name: selenium
+volumes:
+  web_data:
+    external: true
+
