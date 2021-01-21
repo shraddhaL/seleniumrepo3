@@ -23,6 +23,8 @@ services:
       - JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=
       - NODE_MAX_INSTANCE=2
       - NODE_MAX_SESSION=2
+    ports:
+      - "9001:5900"
     networks:
       - selenium
   search-module:
