@@ -8,7 +8,7 @@ pipeline {
     stages { 	
 	    stage('Clone repository') {
 			   steps {	       
-				 git 'https://github.com/shraddhaL/selenium_repo3.git' }
+				 git 'https://github.com/shraddhaL/seleniumrepo3.git' }
         
 			   }
 	    
