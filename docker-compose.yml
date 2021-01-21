@@ -40,6 +40,6 @@ networks:
   selenium:
     name: selenium
 volumes:
-  web_data:
+  target/order-module-result:
     external: true
 
