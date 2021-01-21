@@ -31,7 +31,7 @@ public class SearchPage {
    }*/
   
   public String checkTitle(){
-  //driver.navigate().to("https://www.google.com");
+  driver.navigate().to("https://www.google.com");
   String pageTitle = driver.getTitle();
   System.out.println(pageTitle);
   return pageTitle;
