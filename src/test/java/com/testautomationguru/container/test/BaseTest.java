@@ -42,7 +42,7 @@ public class BaseTest {
         
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
         driver.manage().window().maximize();
-        google = new PageClass(driver);
+     //   google = new PageClass(driver);
         
     }
 
