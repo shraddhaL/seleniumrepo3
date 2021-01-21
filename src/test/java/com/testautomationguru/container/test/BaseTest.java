@@ -34,7 +34,7 @@ ChromeOptions options = new ChromeOptions();
         dc.setCapabilities(ChromeOptions.CAPABILITY,options);
         
         
-        driver = new RemoteWebDriver(new URL("http://localhost:4545/wd/hub"), dc);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
         driver.manage().window.maximize();
         google = new PageClass(driver);
         
