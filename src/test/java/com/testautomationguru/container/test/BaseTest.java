@@ -41,7 +41,7 @@ ChromeOptions options = new ChromeOptions();
         
         
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
       //  google = new PageClass(driver);
         
     }
